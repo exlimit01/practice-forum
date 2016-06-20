@@ -20,6 +20,10 @@ class TopicsController < ApplicationController
     end
   end
 
+  def show
+    @topic = Topic.find(params[:id])
+  end
+
   protected
 
   def topic_params
