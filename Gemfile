@@ -16,6 +16,7 @@ gem 'devise'
 # gem 'therubyracer', platforms: :ruby
 gem 'faker'
 gem 'kaminari'
+gem 'ransack'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 # Use jquery as the JavaScript library
