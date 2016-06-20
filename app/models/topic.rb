@@ -1,6 +1,6 @@
 class Topic < ActiveRecord::Base
   has_many :comments
-  validates_presence_of :title, :content
+  validates_presence_of :title, :content, :user_id
 
   belongs_to :user
 
