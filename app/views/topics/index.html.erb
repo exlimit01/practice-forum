@@ -1,9 +1,14 @@
-<h1>論壇</h1>
-
+<table class="table">
+<tr>
+  <th>標題</th>
+  <th>作者</th>
+</tr>
 <% @topics.each do |t| %>
-
-  <%= t.title %>
-
+  <tr>
+    <td><%= t.title %></td>
+    <td>?</td>
+  </tr>
 <% end %>
+</table>
 
 <%= paginate @topics %>
