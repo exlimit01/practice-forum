@@ -40,6 +40,6 @@ class User < ActiveRecord::Base
    end
 
   def display_name
-    self.email.split("@").first
+    self.nickname || self.email.split("@").first
   end
 end
