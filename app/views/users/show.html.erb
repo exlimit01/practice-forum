@@ -1,6 +1,6 @@
 <h2><%= @user.display_name %></h2>
 
-<h3>Topic list</h3>
+<h3>主題列表</h3>
 
 <ul>
 <% @user.topics.each do |t| %>
@@ -9,7 +9,7 @@
 <% end %>
 </ul>
 
-<h3>Comment list</h3>
+<h3>留言列表</h3>
 
 <ul>
 <% @user.comments.group(:topic_id).order("comments.id DESC").each do |c| %>
