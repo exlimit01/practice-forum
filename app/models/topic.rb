@@ -9,4 +9,10 @@ class Topic < ActiveRecord::Base
   def author_name
     user.try(:display_name) || "Nobody"
   end
+
+  def authors
+    arr = self.comments.map{ |c| c.user }
+    arr << self.user
+    arr.uniq
+  end
 end
