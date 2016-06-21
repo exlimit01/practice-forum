@@ -16,6 +16,10 @@ gem 'devise'
 # gem 'therubyracer', platforms: :ruby
 gem 'faker'
 gem 'kaminari'
+# gem "settingslogic"
+gem "omniauth"
+gem "omniauth-facebook"
+# gem "auto-facebook"
 gem 'ransack'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
