@@ -19,4 +19,8 @@ class Topic < ActiveRecord::Base
   def can_delete_by?(u)
     ( self.user == u ) || (u.is_admin?)
   end
+
+  def view!
+    self.increment!(:views_count)
+  end
 end

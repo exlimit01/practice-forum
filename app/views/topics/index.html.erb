@@ -25,6 +25,7 @@
   <th>標題</th>
   <th>作者</th>
   <th>留言數量</th>
+  <th>觀看次數</th>
   <th>張貼時間</th>
 </tr>
 <% @topics.each do |t| %>
@@ -36,6 +37,7 @@
       <% end %>
     </td>
     <td><%= t.comments_count %></td>
+    <td><%= t.views_count %></td>
     <td><%= t.created_at.to_s(:short) %></td>
   </tr>
 <% end %>
