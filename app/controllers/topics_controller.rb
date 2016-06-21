@@ -37,6 +37,16 @@ class TopicsController < ApplicationController
     @comment = Comment.new
   end
 
+  def destroy
+    @topic = Topic.find( params[:id] )
+
+    if @topic.can_delete_by?(current_user)
+      @topic.destroy
+    end
+
+    redirect_to topics_url
+  end
+
   protected
 
   def topic_params

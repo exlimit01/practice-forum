@@ -42,4 +42,8 @@ class User < ActiveRecord::Base
   def display_name
     self.nickname || self.email.split("@").first
   end
+
+   def is_admin?
+     false
+   end
 end

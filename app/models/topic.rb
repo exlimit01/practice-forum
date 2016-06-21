@@ -1,5 +1,5 @@
 class Topic < ActiveRecord::Base
-  has_many :comments
+  has_many :comments, :dependent => :destroy
   validates_presence_of :title, :content, :user_id
 
   belongs_to :user
@@ -14,5 +14,9 @@ class Topic < ActiveRecord::Base
     arr = self.comments.map{ |c| c.user }
     arr << self.user
     arr.uniq
+  end
+
+  def can_delete_by?(u)
+    ( self.user == u ) || (u.is_admin?)
   end
 end
